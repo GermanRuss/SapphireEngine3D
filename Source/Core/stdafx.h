@@ -9,6 +9,9 @@
 #endif
 
 #include <cstdint>
+#include <cstring>
+
+#include <algorithm>
 
 #include "EndWarningDisable.h"
 //=============================================================================

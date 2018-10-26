@@ -8,13 +8,13 @@
 #include "Core/BeginWarningDisable.h"
 #pragma warning(disable: 4548)
 #include <iostream>
+#include <string>
 #include "Core/EndWarningDisable.h"
 
-__declspec(noinline) int main()
+int main()
 {
-	int *i = new int;
-	se::SafeDelete(i);
-	std::cout << __cplusplus;
+	std::string s("hello");
+
 	system("PAUSE");
 	return 0;
 }

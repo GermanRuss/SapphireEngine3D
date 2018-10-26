@@ -1,7 +1,7 @@
 Sapphire Engine 3D
 =======================
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/warzes/SapphireEngine/blob/master/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/SapphireEngine/SapphireEngine3D/blob/master/LICENSE)
 [![VS 2015 Build status](https://ci.appveyor.com/api/projects/status/9kigq7iqwdwqpbh3?svg=true)](https://ci.appveyor.com/project/warzes/sapphireengine3d)
 
 

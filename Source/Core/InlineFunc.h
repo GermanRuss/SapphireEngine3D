@@ -10,6 +10,13 @@ inline void SafeDelete(T *&resource)
 	resource = nullptr;
 }
 
+template <typename T>
+inline void SafeDeleteArray(T *&resource)
+{
+	delete[] resource;
+	resource = nullptr;
+}
+
 template <class T>
 inline void Unused(T const&){}
 
