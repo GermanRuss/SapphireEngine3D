@@ -3,8 +3,8 @@
 //=============================================================================
 // позволяет не сдвигать код автоформатированием
 //=============================================================================
-#define SE_NAMESPACE_BEGIN          namespace se {
-#define SE_NAMESPACE_END            }
+#define SE_NAMESPACE_BEGIN   namespace se {
+#define SE_NAMESPACE_END     }
 
 //=============================================================================
 // SE_STRINGIZE
@@ -65,8 +65,6 @@
 #		define SE_BREAKPOINT() ((void)0)
 #	endif
 #   define SE_UNREACHABLE() __builtin_unreachable()
-#elif SE_PLATFORM_LINUX
-
 #elif SE_COMPILER_MSVC
 	extern void __cdecl __debugbreak(void);
 #	define SE_BREAKPOINT() __debugbreak()

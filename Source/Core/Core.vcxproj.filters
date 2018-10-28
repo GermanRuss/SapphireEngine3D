@@ -6,7 +6,7 @@
       <Filter>Containers</Filter>
     </ClCompile>
     <ClCompile Include="Strings.cpp">
-      <Filter>String</Filter>
+      <Filter>Containers\String</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -42,7 +42,7 @@
       <Filter>Containers</Filter>
     </ClInclude>
     <ClInclude Include="Strings.h">
-      <Filter>String</Filter>
+      <Filter>Containers\String</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -52,7 +52,7 @@
     <Filter Include="Containers">
       <UniqueIdentifier>{4e8be2d0-793e-4146-a3bd-0053449119d1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="String">
+    <Filter Include="Containers\String">
       <UniqueIdentifier>{f4ccb732-f5a4-4694-aa93-cc6db90167ed}</UniqueIdentifier>
     </Filter>
   </ItemGroup>

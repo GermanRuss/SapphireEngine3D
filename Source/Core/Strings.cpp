@@ -16,72 +16,70 @@ const String String::Empty;
 String::String(int value) : m_buffer(&END_ZERO)
 {
 	char tempBuffer[CONVERSION_BUFFER_LENGTH];
-	int len = sprintf_s(tempBuffer, CONVERSION_BUFFER_LENGTH, "%d", value);
+	sprintf_s(tempBuffer, CONVERSION_BUFFER_LENGTH, "%d", value);
 	*this = tempBuffer;
-
-	TODO("вместо оператора = использовать прямую команду в которую передавать len");
 }
 //-----------------------------------------------------------------------------
 String::String(short value) : m_buffer(&END_ZERO)
 {
 	char tempBuffer[CONVERSION_BUFFER_LENGTH];
-	int len = sprintf_s(tempBuffer, CONVERSION_BUFFER_LENGTH, "%d", value);
+	sprintf_s(tempBuffer, CONVERSION_BUFFER_LENGTH, "%d", value);
 	*this = tempBuffer;
 }
 //-----------------------------------------------------------------------------
 String::String(long value) : m_buffer(&END_ZERO)
 {
 	char tempBuffer[CONVERSION_BUFFER_LENGTH];
-	int len = sprintf_s(tempBuffer, CONVERSION_BUFFER_LENGTH, "%ld", value);
+	sprintf_s(tempBuffer, CONVERSION_BUFFER_LENGTH, "%ld", value);
 	*this = tempBuffer;
 }
 //-----------------------------------------------------------------------------
 String::String(long long value) : m_buffer(&END_ZERO)
 {
 	char tempBuffer[CONVERSION_BUFFER_LENGTH];
-	int len = sprintf_s(tempBuffer, CONVERSION_BUFFER_LENGTH, "%lld", value);
+	sprintf_s(tempBuffer, CONVERSION_BUFFER_LENGTH, "%lld", value);
 	*this = tempBuffer;
 }
 //-----------------------------------------------------------------------------
 String::String(unsigned value) : m_buffer(&END_ZERO)
 {
 	char tempBuffer[CONVERSION_BUFFER_LENGTH];
-	int len = sprintf_s(tempBuffer, CONVERSION_BUFFER_LENGTH, "%u", value);
+	sprintf_s(tempBuffer, CONVERSION_BUFFER_LENGTH, "%u", value);
 	*this = tempBuffer;
 }
 //-----------------------------------------------------------------------------
 String::String(unsigned short value) : m_buffer(&END_ZERO)
 {
 	char tempBuffer[CONVERSION_BUFFER_LENGTH];
-	int len = sprintf_s(tempBuffer, CONVERSION_BUFFER_LENGTH, "%u", value);
+	sprintf_s(tempBuffer, CONVERSION_BUFFER_LENGTH, "%u", value);
 	*this = tempBuffer;
 }
 //-----------------------------------------------------------------------------
 String::String(unsigned long value) : m_buffer(&END_ZERO)
 {
 	char tempBuffer[CONVERSION_BUFFER_LENGTH];
-	int len = sprintf_s(tempBuffer, CONVERSION_BUFFER_LENGTH, "%lu", value);
+	sprintf_s(tempBuffer, CONVERSION_BUFFER_LENGTH, "%lu", value);
 	*this = tempBuffer;
 }
 //-----------------------------------------------------------------------------
 String::String(unsigned long long value) : m_buffer(&END_ZERO)
 {
 	char tempBuffer[CONVERSION_BUFFER_LENGTH];
-	int len = sprintf_s(tempBuffer, CONVERSION_BUFFER_LENGTH, "%llu", value);
+	sprintf_s(tempBuffer, CONVERSION_BUFFER_LENGTH, "%llu", value);
 	*this = tempBuffer;
 }
 //-----------------------------------------------------------------------------
 String::String(float value) : m_buffer(&END_ZERO)
 {
 	char tempBuffer[CONVERSION_BUFFER_LENGTH];
-	int len = sprintf_s(tempBuffer, CONVERSION_BUFFER_LENGTH, "%g", value);
+	sprintf_s(tempBuffer, CONVERSION_BUFFER_LENGTH, "%g", value);
 	*this = tempBuffer;
 }
 //-----------------------------------------------------------------------------
 String::String(double value) : m_buffer(&END_ZERO)
 {
 	char tempBuffer[CONVERSION_BUFFER_LENGTH];
-	int len = sprintf_s(tempBuffer, CONVERSION_BUFFER_LENGTH, "%.15g", value);
+	sprintf_s(tempBuffer, CONVERSION_BUFFER_LENGTH, "%.15g", value);
 	*this = tempBuffer;
 }
 //-----------------------------------------------------------------------------

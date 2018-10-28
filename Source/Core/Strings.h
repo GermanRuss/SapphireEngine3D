@@ -15,9 +15,9 @@ public:
 	using Iterator = RandomAccessIterator<char>;
 	using ConstIterator = RandomAccessConstIterator<char>;
 
-	static constexpr uint32_t NPOS = 0xffffffff;// Position for "not found."
-	static constexpr uint32_t MIN_CAPACITY = 8;	// Initial dynamic allocation size.
-	static const String Empty;					// Empty string.
+	static constexpr uint32_t NPOS = 0xffffffff; // Position for "not found."
+	static constexpr uint32_t MIN_CAPACITY = 8;	 // Initial dynamic allocation size.
+	static const String Empty;					 // Empty string.
 
 	String() : m_buffer(&END_ZERO) {}
 	String(char *str) : m_buffer(&END_ZERO) { *this = (const char*)str; }
@@ -48,12 +48,12 @@ public:
 	~String()
 	{
 		if ( m_capacity )
-			SafeDeleteArray(m_buffer);
+			delete[] m_buffer;
 	}
 
 	String& operator=(const char *rhs)
 	{
-		const uint32_t rhsLength = strlen(rhs);
+		const uint32_t rhsLength = Strlen(rhs);
 		Resize(rhsLength);
 		copyChars(m_buffer, rhs, rhsLength);
 
@@ -89,7 +89,7 @@ public:
 
 	String& operator+=(const char *rhs)
 	{
-		const uint32_t rhsLength = strlen(rhs);
+		const uint32_t rhsLength = Strlen(rhs);
 		const uint32_t oldLength = m_length;
 		Resize(m_length + rhsLength);
 		copyChars(m_buffer + oldLength, rhs, rhsLength);
@@ -129,7 +129,7 @@ public:
 
 	String operator+(const char *rhs) const
 	{
-		const uint32_t rhsLength = strlen(rhs);
+		const uint32_t rhsLength = Strlen(rhs);
 		String ret;
 		ret.Resize(m_length + rhsLength);
 		copyChars(ret.m_buffer, m_buffer, m_length);
@@ -177,6 +177,34 @@ public:
 	void Swap(String &str);
 
 	const char* CString() const { return m_buffer; }
+	uint32_t Length() const { return m_length; }
+	uint32_t Capacity() const { return m_capacity; }
+
+	bool IsEmpty() const { return m_length == 0; }
+
+	Iterator Begin() { return Iterator(m_buffer); }
+	ConstIterator Begin() const { return ConstIterator(m_buffer); }
+
+	Iterator End() { return Iterator(m_buffer + m_length); }
+	ConstIterator End() const { return ConstIterator(m_buffer + m_length); }
+
+	char Front() const { return m_buffer[0]; }
+	char Back() const { return m_length ? m_buffer[m_length - 1] : m_buffer[0]; }
+
+	uint32_t ToHash() const
+	{
+		uint32_t hash = 0;
+		const char *ptr = m_buffer;
+		while ( *ptr )
+		{
+			hash = *ptr + (hash << 6u) + (hash << 16u) - hash;
+			++ptr;
+		}
+
+		return hash;
+	}
+
+	static uint32_t Strlen(const char *str) { return str ? (uint32_t)strlen(str) : 0; }
 
 private:
 	static void copyChars(char *dest, const char *src, size_t count)
@@ -201,6 +229,13 @@ private:
 	uint32_t m_capacity = 0;
 	char *m_buffer;
 };
+
+inline String operator+(const char *lhs, const String &rhs)
+{
+	String ret(lhs);
+	ret += rhs;
+	return ret;
+}
 
 SE_NAMESPACE_END
 //=============================================================================

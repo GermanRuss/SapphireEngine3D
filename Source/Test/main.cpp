@@ -11,10 +11,9 @@
 #include <string>
 #include "Core/EndWarningDisable.h"
 
+
 int main()
 {
-	std::string s("hello");
-
 	system("PAUSE");
 	return 0;
 }
