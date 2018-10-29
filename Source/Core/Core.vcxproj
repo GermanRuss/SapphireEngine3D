@@ -159,6 +159,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Allocator.h" />
     <ClInclude Include="Base.h" />
     <ClInclude Include="BeginWarningDisable.h" />
     <ClInclude Include="EndWarningDisable.h" />
@@ -166,6 +167,7 @@
     <ClInclude Include="Iterator.h" />
     <ClInclude Include="Macros.h" />
     <ClInclude Include="MinWindowsConfig.h" />
+    <ClInclude Include="NonCopyable.h" />
     <ClInclude Include="Platform.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="MinStdConfig.h" />

@@ -88,6 +88,7 @@
 			static_cast<void>((!!(expr)) \
 			|| (1 != _CrtDbgReportW(_CRT_ASSERT, _CRT_WIDE(__FILE__), __LINE__, nullptr, L"%s", msg)) \
 			|| (_CrtDbgBreak(), false))
+#	define SE_ASSERTS_ENABLED 1
 // Debug mode
 #elif defined(_DEBUG)
 #	include <assert.h>
@@ -99,9 +100,11 @@
                     SE_BREAKPOINT();               \
                 }                                  \
             } while(false)
+#	define SE_ASSERTS_ENABLED 1
 #else
 #	define Assert(expr) ((void)0)
 #	define AssertMsg(expr, msg) ((void)0)
+#	define SE_ASSERTS_ENABLED 0
 #endif
 
 //=============================================================================

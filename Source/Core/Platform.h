@@ -24,6 +24,13 @@
 #define SE_PLATFORM_WINDOWS        0
 #define SE_PLATFORM_UWP            0 // Universal Windows platform
 
+// POSIX system or not
+#define SE_POSIX                   0
+
+// OpenGL version
+#define SE_GL_DESKTOP              0
+#define SE_GL_ES                   0
+
 // SIMD
 #define SE_SIMD_SSE2               0
 #define SE_SIMD_NEON               0
@@ -102,9 +109,28 @@
 #endif
 
 //=============================================================================
+// POSIX
+//=============================================================================
+#if SE_PLATFORM_ANDROID || SE_PLATFORM_LINUX
+#	undef  SE_POSIX
+#	define SE_POSIX 1
+#endif
+
+//=============================================================================
+// OPENGL VERSION
+//=============================================================================
+#if SE_PLATFORM_LINUX || SE_PLATFORM_WINDOWS
+#	undef  SE_GL_DESKTOP
+#	define SE_GL_DESKTOP 1
+#else
+#	undef  SE_GL_ES
+#	define SE_GL_ES 1
+#endif
+
+//=============================================================================
 // SIMD
 //=============================================================================
-#if defined(__SSE2__) || defined(__i386__) || defined(_M_IX86) || defined(__x86_64__) || defined(_M_X64)
+#if defined(__SSE2__) || defined(__i386__) || defined(__amd64__) || defined(_M_IX86) || defined(__x86_64__) || defined(_M_X64)
 #	undef  SE_SIMD_SSE2
 #	define SE_SIMD_SSE2 1
 #endif

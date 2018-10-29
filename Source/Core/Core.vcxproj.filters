@@ -44,6 +44,12 @@
     <ClInclude Include="Strings.h">
       <Filter>Containers\String</Filter>
     </ClInclude>
+    <ClInclude Include="NonCopyable.h">
+      <Filter>Template</Filter>
+    </ClInclude>
+    <ClInclude Include="Allocator.h">
+      <Filter>Memory</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
@@ -54,6 +60,12 @@
     </Filter>
     <Filter Include="Containers\String">
       <UniqueIdentifier>{f4ccb732-f5a4-4694-aa93-cc6db90167ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Template">
+      <UniqueIdentifier>{a38abdc2-b25a-415e-a251-3a81ed5a4f58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Memory">
+      <UniqueIdentifier>{6880eb93-44d5-4429-918c-eb8e7e4e54a3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
