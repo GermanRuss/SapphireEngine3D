@@ -83,6 +83,7 @@
 //-----------------------------------------------------------------------------
 // Debug mode under Visual Studio
 #if defined(_DEBUG) && SE_COMPILER_MSVC
+#	include <crtdbg.h>
 #	define Assert(expr) static_cast<void>((!!(expr)) || (_CrtDbgBreak(), _ASSERT(expr), false))
 #	define AssertMsg(expr, msg) \
 			static_cast<void>((!!(expr)) \

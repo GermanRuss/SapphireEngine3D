@@ -7,13 +7,9 @@
 
 #include "Core/BeginWarningDisable.h"
 #pragma warning(disable: 4548)
-#include <iostream>
-#include <string>
 #include "Core/EndWarningDisable.h"
 
+#include "App/Main.h"
+#include "App/App.h"
 
-int main()
-{
-	system("PAUSE");
-	return 0;
-}
+SapphireMain(App);
