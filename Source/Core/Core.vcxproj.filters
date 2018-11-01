@@ -2,12 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="Swap.cpp">
-      <Filter>Containers</Filter>
-    </ClCompile>
-    <ClCompile Include="Strings.cpp">
-      <Filter>Containers\String</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -35,20 +29,8 @@
     <ClInclude Include="InlineFunc.h">
       <Filter>Base</Filter>
     </ClInclude>
-    <ClInclude Include="Iterator.h">
-      <Filter>Containers</Filter>
-    </ClInclude>
-    <ClInclude Include="Swap.h">
-      <Filter>Containers</Filter>
-    </ClInclude>
-    <ClInclude Include="Strings.h">
-      <Filter>Containers\String</Filter>
-    </ClInclude>
     <ClInclude Include="NonCopyable.h">
       <Filter>Template</Filter>
-    </ClInclude>
-    <ClInclude Include="Allocator.h">
-      <Filter>Memory</Filter>
     </ClInclude>
     <ClInclude Include="Global.h">
       <Filter>Base</Filter>
@@ -60,9 +42,6 @@
     </Filter>
     <Filter Include="Containers">
       <UniqueIdentifier>{4e8be2d0-793e-4146-a3bd-0053449119d1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Containers\String">
-      <UniqueIdentifier>{f4ccb732-f5a4-4694-aa93-cc6db90167ed}</UniqueIdentifier>
     </Filter>
     <Filter Include="Template">
       <UniqueIdentifier>{a38abdc2-b25a-415e-a251-3a81ed5a4f58}</UniqueIdentifier>

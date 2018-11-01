@@ -169,21 +169,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Allocator.h" />
     <ClInclude Include="Base.h" />
     <ClInclude Include="BeginWarningDisable.h" />
     <ClInclude Include="EndWarningDisable.h" />
     <ClInclude Include="Global.h" />
     <ClInclude Include="InlineFunc.h" />
-    <ClInclude Include="Iterator.h" />
     <ClInclude Include="Macros.h" />
     <ClInclude Include="MinWindowsConfig.h" />
     <ClInclude Include="NonCopyable.h" />
     <ClInclude Include="Platform.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="MinStdConfig.h" />
-    <ClInclude Include="Strings.h" />
-    <ClInclude Include="Swap.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -192,8 +188,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Strings.cpp" />
-    <ClCompile Include="Swap.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
