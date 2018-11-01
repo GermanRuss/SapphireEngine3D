@@ -1,7 +1,5 @@
 ﻿// This is an independent project of an individual developer. Dear PVS-Studio, please check it.
 // PVS-Studio Static Code Analyzer for C, C++ and C#: http://www.viva64.com
-#pragma comment(lib, "Core.lib")
-#pragma comment(lib, "App.lib")
 
 #include "Core/Base.h"
 
@@ -12,4 +10,17 @@
 #include "App/Main.h"
 #include "App/App.h"
 
-SapphireMain(App);
+#if SE_ARCHITECTURE_X86
+#	pragma comment(lib, "Core_Win32.lib")
+#	pragma comment(lib, "App_Win32.lib")
+#elif SE_ARCHITECTURE_X64
+#	pragma comment(lib, "Core_x64.lib")
+#	pragma comment(lib, "App_x64.lib")
+#endif
+
+int main(int argc, const char **argv)
+{
+	se::App app;
+	app.Start();
+	return 0;
+}
