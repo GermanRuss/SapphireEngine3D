@@ -24,9 +24,7 @@
 //=============================================================================
 // SE_FORCE_INLINE
 //=============================================================================
-#if SE_COMPILER_MSVC
-#	define SE_FORCE_INLINE __forceinline
-#elif SE_COMPILER_CLANG
+#if SE_COMPILER_CLANG
 #	if defined(__clang___)
 #		if __has_attribute(always_inline)
 #			define SE_FORCE_INLINE __attribute__((always_inline)) __inline__
@@ -36,6 +34,8 @@
 #	endif
 #elif SE_COMPILER_GNUC
 #	define SE_FORCE_INLINE __attribute__((always_inline)) __inline__
+#elif SE_COMPILER_MSVC
+#	define SE_FORCE_INLINE __forceinline
 #else
 #	define SE_FORCE_INLINE inline
 #endif
@@ -43,12 +43,52 @@
 //=============================================================================
 // NORETURN
 //=============================================================================
-#if SE_COMPILER_MSVC && (SE_COMPILER_MSVC <= 1800)
-#	define NORETURN    __declspec(noreturn)
-#elif SE_COMPILER_GNUC
+#if SE_COMPILER_GNUC
 #	define NORETURN    __attribute__((noreturn))
+#elif SE_COMPILER_MSVC && (SE_COMPILER_MSVC <= 1800)
+#	define NORETURN    __declspec(noreturn)
 #else
 #	define NORETURN    [[noreturn]]
+#endif
+
+//=============================================================================
+// SE_THREADLOCAL
+//=============================================================================
+#if SE_COMPILER_CLANG || SE_COMPILER_GNUC
+#	define SE_THREADLOCAL __thread
+#elif SE_COMPILER_INTEL
+#	if SE_PLATFORM_WINDOWS
+#		define SE_THREADLOCAL __declspec(thread)
+#	else
+#		define SE_THREADLOCAL __thread
+#	endif
+#elif SE_COMPILER_MSVC
+#	define SE_THREADLOCAL __declspec(thread)
+#endif
+
+//=============================================================================
+// SE_FALLTHROUGH
+//=============================================================================
+#if SE_COMPILER_CLANG
+#	define SE_FALLTHROUGH [[clang::fallthrough]];
+#elif SE_COMPILER_GNUC
+#	define SE_FALLTHROUGH __attribute__((fallthrough));
+#elif SE_COMPILER_INTEL
+#	define SE_FALLTHROUGH
+#elif SE_COMPILER_MSVC
+#	if (SE_COMPILER_MSVC > 1910 )
+#		define SE_FALLTHROUGH [[fallthrough]]
+#	else
+#		define SE_FALLTHROUGH
+#	endif
+#endif
+
+//=============================================================================
+// __PRETTY_FUNCTION__
+//=============================================================================
+#if SE_COMPILER_MSVC
+#	undef __PRETTY_FUNCTION__
+#	define __PRETTY_FUNCTION__ __FUNCSIG__
 #endif
 
 //=============================================================================

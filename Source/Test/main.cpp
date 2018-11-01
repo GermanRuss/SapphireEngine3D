@@ -7,9 +7,6 @@
 #pragma warning(disable: 4548)
 #include "Core/EndWarningDisable.h"
 
-#include "App/Main.h"
-#include "App/App.h"
-
 #if SE_ARCHITECTURE_X86
 #	pragma comment(lib, "Core_Win32.lib")
 #	pragma comment(lib, "App_Win32.lib")
@@ -18,9 +15,7 @@
 #	pragma comment(lib, "App_x64.lib")
 #endif
 
-int main(int argc, const char **argv)
+int main()
 {
-	se::App app;
-	app.Start();
 	return 0;
 }

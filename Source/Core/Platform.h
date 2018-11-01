@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-// DOC https://sourceforge.net/p/predef/wiki/Home/
+// DOC: https://sourceforge.net/p/predef/wiki/Home/
 
 // Compiler
 #define SE_COMPILER_MSVC           0
@@ -27,6 +27,9 @@
 // POSIX system or not
 #define SE_POSIX                   0
 
+// Debug
+#define SE_DEBUG_MODE				0
+
 // OpenGL version
 #define SE_GL_DESKTOP              0
 #define SE_GL_ES                   0
@@ -39,13 +42,7 @@
 //=============================================================================
 // Compiler
 //=============================================================================
-#if defined(_MSC_VER)
-#	undef  SE_COMPILER_MSVC
-#	define SE_COMPILER_MSVC _MSC_VER
-#	if (SE_COMPILER_MSVC < 1800)
-#		error "Current version Visual Studio not support!!"
-#	endif
-#elif defined(__clang__)
+#if defined(__clang__)
 #	undef  SE_COMPILER_CLANG
 #	define SE_COMPILER_CLANG __clang_version__
 #elif defined(__GNUC__) // Check after Clang, as Clang defines this too
@@ -57,6 +54,12 @@
 #elif defined(__MINGW32__) || defined(__MINGW64__)
 #	undef  SE_COMPILER_MINGW
 #	define SE_COMPILER_MINGW 1
+#elif defined(_MSC_VER) // Check after Clang and Intel, since we could be building with either within VS
+#	undef  SE_COMPILER_MSVC
+#	define SE_COMPILER_MSVC _MSC_VER
+#	if (SE_COMPILER_MSVC < 1800)
+#		error "Current version Visual Studio not support!!"
+#	endif
 #else
 #	error "Unknown compiler"
 #endif
@@ -114,6 +117,16 @@
 #if SE_PLATFORM_ANDROID || SE_PLATFORM_LINUX
 #	undef  SE_POSIX
 #	define SE_POSIX 1
+#endif
+
+//=============================================================================
+// DEBUG MODE
+//=============================================================================
+// Win32 compilers use _DEBUG for specifying debug builds.
+// for MinGW, we set DEBUG
+#if defined(_DEBUG) || defined(DEBUG)
+#	undef  SE_DEBUG_MODE
+#	define SE_DEBUG_MODE 1
 #endif
 
 //=============================================================================
