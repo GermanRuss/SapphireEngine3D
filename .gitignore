@@ -29,7 +29,7 @@ Thumbs.db
 /*/ipch/
 
 #Ignore project exe
-/bin/*_Debug_Win32.exe
-/bin/*_Release_Win32.exe
-/bin/*_Debug_x64.exe
-/bin/*_Release_x64.exe
+/bin/*/*_Debug_Win32.exe
+/bin/*/*_Release_Win32.exe
+/bin/*/*_Debug_x64.exe
+/bin/*/*_Release_x64.exe
