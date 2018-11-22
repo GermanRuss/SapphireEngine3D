@@ -1,9 +1,9 @@
-#if _MSC_VER
+﻿#if _MSC_VER
 #	pragma warning( disable : 4710 ) // Suppress 'function ... not inlined' for Release builds
 #	pragma warning( push, 0 )
 #	define _CRT_SECURE_NO_WARNINGS
 #endif
-
+//-----------------------------------------------------------------------------
 #if _WIN32
 #	define _GLFW_WIN32 1
 #	include "GLFW/src/context.c"
@@ -24,8 +24,9 @@
 #else
 #	error "TODO:"
 #endif
-
+//-----------------------------------------------------------------------------
 #if _MSC_VER
 #	undef _CRT_SECURE_NO_WARNINGS
 #	pragma warning( pop )
 #endif
+//-----------------------------------------------------------------------------

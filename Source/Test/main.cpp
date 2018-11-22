@@ -3,6 +3,7 @@
 
 // Core lib
 #include "Core/Base.h"
+#include "Core/Function.h"
 
 // App lib
 #include "App/Application.h"
@@ -20,5 +21,5 @@
 #	endif
 #endif
 //-----------------------------------------------------------------------------
-SE_DECLARE_MAIN(1);
+SE_DECLARE_MAIN(Application);
 //-----------------------------------------------------------------------------
