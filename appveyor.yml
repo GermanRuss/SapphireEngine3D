@@ -2,6 +2,8 @@ version: 0.0.{build}
 image: Visual Studio 2015
 configuration: Release
 platform: x86
+build_script:
+  - git submodule update --init --recursive
 build:
   project: Source\code.sln
   parallel: true
