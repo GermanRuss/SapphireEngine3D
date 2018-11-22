@@ -100,7 +100,6 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
       <MinimalRebuild>false</MinimalRebuild>
-      <ExceptionHandling />
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -119,7 +118,6 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
       <MinimalRebuild>false</MinimalRebuild>
-      <ExceptionHandling />
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -138,7 +136,6 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
-      <ExceptionHandling />
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -159,7 +156,6 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
-      <ExceptionHandling />
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -170,6 +166,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
+    <ClInclude Include="Main.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>

@@ -3,10 +3,10 @@
 
 // Core lib
 #include "Core/Base.h"
-#include "Core/Function.h"
+#include <cstdint>
 
 // App lib
-#include "App/Application.h"
+#include "App/Main.h"
 
 //-----------------------------------------------------------------------------
 #if SE_COMPILER_MSVC
@@ -20,6 +20,15 @@
 #		pragma comment(lib, "3rdparty_x64.lib")
 #	endif
 #endif
+
 //-----------------------------------------------------------------------------
-SE_DECLARE_MAIN(Application);
+se::ApplicationSettings SetAppSetting()
+{
+	se::ApplicationSettings setting;
+	setting.width = 800;
+	setting.height = 600;
+	return setting;
+}
+//-----------------------------------------------------------------------------
+SE_DECLARE_MAIN(se::Application);
 //-----------------------------------------------------------------------------

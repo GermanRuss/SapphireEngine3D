@@ -1,20 +1,29 @@
 ﻿#pragma once
 
-#define SE_DECLARE_MAIN(_className)        \
-    int main(int argc, const char *argv[]) \
-    {                                      \
-        SE_NAMESPACE::_className app;      \
-        return app.Run(argc, argv);        \
-    }
-
 //=============================================================================
 SE_NAMESPACE_BEGIN
+
+struct ApplicationSettings
+{
+	ApplicationSettings() = default;
+	ApplicationSettings(uint32_t w, uint32_t h)
+		: width(w)
+		, height(h)
+	{
+	}
+
+	uint32_t width = 800;
+	uint32_t height = 600;
+};
 
 class Application
 {
 public:
 	// Run method. Command line arguments passed in.
-	int Run(int argc, const char* argv[]);
+	int Run(const ApplicationSettings &setting, int argc, const char *argv[]);
+
+private:
+	ApplicationSettings m_setting;
 };
 
 SE_NAMESPACE_END

@@ -1,6 +1,6 @@
 ﻿#if _MSC_VER
 #	pragma warning( disable : 4710 ) // Suppress 'function ... not inlined' for Release builds
-#	pragma warning( push, 0 )
+#	pragma warning( push, 1 )
 #	define _CRT_SECURE_NO_WARNINGS
 #endif
 //-----------------------------------------------------------------------------

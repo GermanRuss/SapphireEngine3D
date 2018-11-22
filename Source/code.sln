@@ -25,11 +25,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config Engine", "Config Eng
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "template file", "template file", "{AD7BEF18-F718-4D0A-9A19-C5AE6DDF8D2D}"
 	ProjectSection(SolutionItems) = preProject
+		..\doc\other.txt = ..\doc\other.txt
 		..\doc\TemplateFile\TemplateCPP.cpp = ..\doc\TemplateFile\TemplateCPP.cpp
 		..\doc\TemplateFile\TemplateHeader.h = ..\doc\TemplateFile\TemplateHeader.h
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3rdparty", "3rdparty\3rdparty.vcxproj", "{66E2BC8F-0D3E-4B1F-8580-3E96E457343E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{C5D8D5AB-2DA6-4EE8-8A9E-80733A40A748}"
+	ProjectSection(SolutionItems) = preProject
+		..\doc\other.txt = ..\doc\other.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,7 +85,7 @@ Global
 		{2A1B161C-6A4A-445D-B732-8FBF4ECFD7D5} = {0246F283-F5C7-4B65-B0AF-E7530C3CA33E}
 		{FD8E8E4D-92C9-41B5-9C7B-3D8712A7EE89} = {0246F283-F5C7-4B65-B0AF-E7530C3CA33E}
 		{74DA984F-50E7-47EC-9004-928295FF8BA4} = {0246F283-F5C7-4B65-B0AF-E7530C3CA33E}
-		{AD7BEF18-F718-4D0A-9A19-C5AE6DDF8D2D} = {0246F283-F5C7-4B65-B0AF-E7530C3CA33E}
+		{AD7BEF18-F718-4D0A-9A19-C5AE6DDF8D2D} = {C5D8D5AB-2DA6-4EE8-8A9E-80733A40A748}
 		{66E2BC8F-0D3E-4B1F-8580-3E96E457343E} = {0246F283-F5C7-4B65-B0AF-E7530C3CA33E}
 	EndGlobalSection
 EndGlobal

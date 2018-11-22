@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Коды предупреждений студии:
+https://github.com/MicrosoftDocs/cpp-docs/blob/master/docs/preprocessor/compiler-warnings-that-are-off-by-default.md
+-------------------------------------------------------------------------------

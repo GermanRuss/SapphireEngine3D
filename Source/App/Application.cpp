@@ -7,7 +7,7 @@
 SE_NAMESPACE_BEGIN
 
 //-----------------------------------------------------------------------------
-int Application::Run(int argc, const char *argv[])
+int Application::Run(const ApplicationSettings &setting, int argc, const char *argv[])
 {
 	return 0;
 }
