@@ -9,13 +9,21 @@
 #define SE_COMPILER_INTEL          0
 #define SE_COMPILER_MINGW          0
 
+// CPU
+#define SE_CPU_ARM                 0
+#define SE_CPU_JIT                 0
+#define SE_CPU_MIPS                0
+#define SE_CPU_PPC                 0
+#define SE_CPU_RISCV               0
+#define SE_CPU_X86                 0
+
 // Architecture
-#define SE_ARCHITECTURE_X64        0
-#define SE_ARCHITECTURE_X86        0
-#define SE_ARCHITECTURE_A64        0
-#define SE_ARCHITECTURE_ARM        0
-#define SE_ARCHITECTURE_SPU        0
-#define SE_ARCHITECTURE_PPC        0
+#define SE_ARCH_32BIT              0
+#define SE_ARCH_64BIT              0
+
+// Endianess
+#define SE_CPU_ENDIAN_BIG          0
+#define SE_CPU_ENDIAN_LITTLE       0
 
 // Platform
 #define SE_PLATFORM_ANDROID        0
@@ -23,9 +31,6 @@
 #define SE_PLATFORM_LINUX          0
 #define SE_PLATFORM_WINDOWS        0
 #define SE_PLATFORM_UWP            0 // Universal Windows platform
-
-// POSIX system or not
-#define SE_POSIX                   0
 
 // Debug
 #define SE_DEBUG_MODE				0
@@ -54,39 +59,69 @@
 #elif defined(__MINGW32__) || defined(__MINGW64__)
 #	undef  SE_COMPILER_MINGW
 #	define SE_COMPILER_MINGW 1
-#elif defined(_MSC_VER) // Check after Clang and Intel, since we could be building with either within VS
+#elif defined(_MSC_VER) && (_MSC_VER >= 1900) // Check after Clang and Intel, since we could be building with either within VS
 #	undef  SE_COMPILER_MSVC
 #	define SE_COMPILER_MSVC _MSC_VER
-#	if (SE_COMPILER_MSVC < 1800)
-#		error "Current version Visual Studio not support!!"
-#	endif
 #else
 #	error "Unknown compiler"
 #endif
 
 //=============================================================================
+// CPU
+//=============================================================================
+#if defined(__arm__) || defined(_M_ARM) || defined(__arm64__) || defined(__aarch64__)
+#	undef  SE_CPU_ARM
+#	define SE_CPU_ARM 1
+#	define SE_CACHE_LINE_SIZE 64
+#elif defined(__MIPSEL__) || defined(__mips_isa_rev) || defined(__mips64)
+#	undef  SE_CPU_MIPS
+#	define SE_CPU_MIPS 1
+#	define SE_CACHE_LINE_SIZE 64
+#elif defined(_M_PPC) || defined(__powerpc__) || defined(__powerpc64__)
+#	undef  SE_CPU_PPC
+#	define SE_CPU_PPC 1
+#	define SE_CACHE_LINE_SIZE 128
+#elif defined(__riscv) || defined(__riscv__) || defined(RISCVEL)
+#	undef  SE_CPU_RISCV
+#	define SE_CPU_RISCV 1
+#	define SE_CACHE_LINE_SIZE 64
+#elif defined(__i386__) || defined(_M_IX86) || defined(_M_X64) ||  defined(__x86_64__)
+#	undef  SE_CPU_X86
+#	define SE_CPU_X86 1
+#	define SE_CACHE_LINE_SIZE 64
+#else // PNaCl doesn't have CPU defined.
+#	undef  SE_CPU_JIT
+#	define SE_CPU_JIT 1
+#	define SE_CACHE_LINE_SIZE 64
+#endif
+
+//=============================================================================
 // Architecture
 //=============================================================================
-#if defined(__x86_64__) || defined(_M_X64)
-#	undef  SE_ARCHITECTURE_X64
-#	define SE_ARCHITECTURE_X64 1
-#elif defined(__i386__) || defined(_M_IX86)
-#	undef  SE_ARCHITECTURE_X86
-#	define SE_ARCHITECTURE_X86 1
-#elif defined(__arm64__) || defined(__aarch64__)
-#	undef  SE_ARCHITECTURE_A64
-#	define SE_ARCHITECTURE_A64 1
-#elif defined(__arm__) || defined(_M_ARM)
-#	undef  SE_ARCHITECTURE_ARM
-#	define SE_ARCHITECTURE_ARM 1
-#elif defined(__SPU__)
-#	undef  SE_ARCHITECTURE_SPU
-#	define SE_ARCHITECTURE_SPU 1
-#elif defined(__ppc__) || defined(_M_PPC) || defined(__CELLOS_LV2__)
-#	undef  SE_ARCHITECTURE_PPC
-#	define SE_ARCHITECTURE_PPC 1
+#if defined(__x86_64__)    || \
+	defined(_M_X64)        || \
+	defined(__aarch64__)   || \
+	defined(__64BIT__)     || \
+	defined(__mips64)      || \
+	defined(__powerpc64__) || \
+	defined(__ppc64__)     || \
+	defined(__LP64__)
+#	undef  SE_ARCH_64BIT
+#	define SE_ARCH_64BIT 64
 #else
-#	error "Unknown architecture"
+#	undef  SE_ARCH_32BIT
+#	define SE_ARCH_32BIT 32
+#endif
+
+//=============================================================================
+// Endianess
+//=============================================================================
+#if SE_CPU_PPC
+#	undef  SE_CPU_ENDIAN_BIG
+#	define SE_CPU_ENDIAN_BIG 1
+#else
+#	undef  SE_CPU_ENDIAN_LITTLE
+#	define SE_CPU_ENDIAN_LITTLE 1
 #endif
 
 //=============================================================================
@@ -109,14 +144,6 @@
 #elif defined(__EMSCRIPTEN__)
 #	undef  SE_PLATFORM_EMSCRIPTEN
 #	define SE_PLATFORM_EMSCRIPTEN 1
-#endif
-
-//=============================================================================
-// POSIX
-//=============================================================================
-#if SE_PLATFORM_ANDROID || SE_PLATFORM_LINUX
-#	undef  SE_POSIX
-#	define SE_POSIX 1
 #endif
 
 //=============================================================================

@@ -20,12 +20,6 @@
     <ClInclude Include="Base.h">
       <Filter>Base</Filter>
     </ClInclude>
-    <ClInclude Include="BeginWarningDisable.h">
-      <Filter>Base</Filter>
-    </ClInclude>
-    <ClInclude Include="EndWarningDisable.h">
-      <Filter>Base</Filter>
-    </ClInclude>
     <ClInclude Include="InlineFunc.h">
       <Filter>Base</Filter>
     </ClInclude>

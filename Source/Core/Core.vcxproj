@@ -170,8 +170,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Base.h" />
-    <ClInclude Include="BeginWarningDisable.h" />
-    <ClInclude Include="EndWarningDisable.h" />
     <ClInclude Include="Global.h" />
     <ClInclude Include="InlineFunc.h" />
     <ClInclude Include="Macros.h" />

@@ -17,8 +17,5 @@ inline void SafeDeleteArray(T *&resource)
 	resource = nullptr;
 }
 
-template <typename T>
-inline void Unused(T &&arg) noexcept { (void)arg; }
-
 SE_NAMESPACE_END
 //=============================================================================

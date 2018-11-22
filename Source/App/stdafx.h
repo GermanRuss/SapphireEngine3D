@@ -3,12 +3,15 @@
 #include "Core/Base.h"
 
 //=============================================================================
-#include "Core/BeginWarningDisable.h"
 #ifdef SE_COMPILER_MSVC
-//#	pragma warning(disable: 0000)
+#	pragma warning(push, 3) // Set warning levels to a quieter level for the STL
+#	pragma warning(disable: 4548)
 #endif
+
 
 #include <cstdint>
 
-#include "Core/EndWarningDisable.h"
+#ifdef SE_COMPILER_MSVC
+#	pragma warning(pop) // Restore warning levels for our code
+#endif
 //=============================================================================
