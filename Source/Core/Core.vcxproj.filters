@@ -2,6 +2,9 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Logger.cpp">
+      <Filter>Debug</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -32,6 +35,9 @@
     <ClInclude Include="Function.h">
       <Filter>Template</Filter>
     </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Debug</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
@@ -45,6 +51,9 @@
     </Filter>
     <Filter Include="Memory">
       <UniqueIdentifier>{6880eb93-44d5-4429-918c-eb8e7e4e54a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Debug">
+      <UniqueIdentifier>{3be04d7e-87a3-4be4-b629-c0c237277173}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

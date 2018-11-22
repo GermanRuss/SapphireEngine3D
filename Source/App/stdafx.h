@@ -9,6 +9,10 @@
 
 #include <cstdint>
 
+#include <GLFW/include/GLFW/glfw3.h>
+
+#include "Core/Logger.h"
+
 #ifdef SE_COMPILER_MSVC
 #	pragma warning(pop)     // Restore warning levels for our code
 #endif

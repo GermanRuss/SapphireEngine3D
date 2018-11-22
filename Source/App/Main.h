@@ -10,19 +10,21 @@ SE_NAMESPACE_BEGIN
 template <typename T>
 SE_FORCE_INLINE int Main(int argc, const char *argv[])
 {
+	int ret = 0;
 #if SE_ENABLE_EXCETION
 	try
 #endif // SE_ENABLE_EXCETION
-	{
+	{		
 		T app;
-		return app.Run(SetAppSetting(), argc, argv);
+		const auto setting = SetAppSetting();
+		ret = app.Run(setting, argc, argv);
 	}
 #if SE_ENABLE_EXCETION
 	catch ( ... )
 	{
-		return 0;
 	}
 #endif // SE_ENABLE_EXCETION
+	return ret;
 }
 
 SE_NAMESPACE_END

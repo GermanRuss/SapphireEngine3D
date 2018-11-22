@@ -2,10 +2,10 @@
 // PVS-Studio Static Code Analyzer for C, C++ and C#: http://www.viva64.com
 
 // Core lib
-#include "Core/Base.h"
-#include <cstdint>
+#include "Core/stdafx.h"
 
 // App lib
+#include "App/stdafx.h"
 #include "App/Main.h"
 
 //-----------------------------------------------------------------------------

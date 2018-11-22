@@ -1,5 +1,7 @@
 ﻿#pragma once
 
+#include "Context.h"
+
 //=============================================================================
 SE_NAMESPACE_BEGIN
 
@@ -24,6 +26,7 @@ public:
 
 private:
 	ApplicationSettings m_setting;
+	Context m_context;
 };
 
 SE_NAMESPACE_END

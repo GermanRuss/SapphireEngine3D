@@ -10,3 +10,5 @@ build:
   project: Source\code.sln
   parallel: true
   verbosity: minimal
+test: off
+deploy: off

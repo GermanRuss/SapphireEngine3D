@@ -9,6 +9,18 @@ SE_NAMESPACE_BEGIN
 //-----------------------------------------------------------------------------
 int Application::Run(const ApplicationSettings &setting, int argc, const char *argv[])
 {
+	SE_UNUSED(argc);
+	SE_UNUSED(argv);
+
+	m_setting = setting;
+
+	if ( !m_context.Init() )
+		return 1;
+
+	while ( m_context.Frame() );
+
+	m_context.Close();
+
 	return 0;
 }
 //-----------------------------------------------------------------------------
