@@ -5,8 +5,8 @@
     <ClCompile Include="Application.cpp">
       <Filter>App</Filter>
     </ClCompile>
-    <ClCompile Include="Context.cpp">
-      <Filter>Context</Filter>
+    <ClCompile Include="Window.cpp">
+      <Filter>Window</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -17,15 +17,15 @@
     <ClInclude Include="Main.h">
       <Filter>App</Filter>
     </ClInclude>
-    <ClInclude Include="Context.h">
-      <Filter>Context</Filter>
+    <ClInclude Include="Window.h">
+      <Filter>Window</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="App">
       <UniqueIdentifier>{e4d85c2f-cbbe-4586-90c5-425ed2d487c9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Context">
+    <Filter Include="Window">
       <UniqueIdentifier>{2f678273-b629-4b6f-8bf1-b8d0d9c5cf9e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>

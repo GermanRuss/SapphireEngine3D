@@ -1,27 +1,26 @@
 ﻿// This is an independent project of an individual developer. Dear PVS-Studio, please check it.
 // PVS-Studio Static Code Analyzer for C, C++ and C#: http://www.viva64.com
 #include "stdafx.h"
-#include "Application.h"
+#include "Window.h"
 
 //=============================================================================
 SE_NAMESPACE_BEGIN
 
 //-----------------------------------------------------------------------------
-int Application::Run(const ApplicationSettings &setting, int argc, const char *argv[])
+bool Window::Init()
 {
-	SE_UNUSED(argc);
-	SE_UNUSED(argv);
+	return true;
+}
+//-----------------------------------------------------------------------------
+bool Window::Frame()
+{
 
-	m_setting = setting;
+	return true;
+}
+//-----------------------------------------------------------------------------
+void Window::Close()
+{
 
-	if ( !m_window.Init() )
-		return 1;
-
-	while ( m_window.Frame() );
-
-	m_window.Close();
-
-	return 0;
 }
 //-----------------------------------------------------------------------------
 
