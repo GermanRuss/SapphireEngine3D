@@ -12,6 +12,25 @@ void windowResize(GLFWwindow *window, int width, int height)
 	glViewport(0, 0, width, height);
 }
 //-----------------------------------------------------------------------------
+void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods)
+{
+	Window *win = (Window*)glfwGetWindowUserPointer(window);
+	win->m_keys[key] = action != GLFW_RELEASE;
+}
+//-----------------------------------------------------------------------------
+void mouseButtonCallback(GLFWwindow *window, int button, int action, int mods)
+{
+	Window *win = (Window*)glfwGetWindowUserPointer(window);
+	win->m_mouseButtons[button] = action != GLFW_RELEASE;
+}
+//-----------------------------------------------------------------------------
+void cursorPositionCallback(GLFWwindow *window, double xpos, double ypos)
+{
+	Window *win = (Window*)glfwGetWindowUserPointer(window);
+	win->m_x = xpos;
+	win->m_y = ypos;
+}
+//-----------------------------------------------------------------------------
 Window::~Window()
 {
 	Close();
@@ -20,6 +39,10 @@ Window::~Window()
 bool Window::Init(const WindowConfig &config)
 {
 	m_config = config;
+	for ( int i = 0; i < SE_MAX_KEYS; i++ )
+		m_keys[i] = false;
+	for ( int i = 0; i < SE_MAX_BUTTONS; i++ )
+		m_mouseButtons[i] = false;
 
 	if ( !glfwInit() )
 	{
@@ -34,7 +57,17 @@ bool Window::Init(const WindowConfig &config)
 		return false;
 	}
 	glfwMakeContextCurrent(m_window);
+	glfwSetWindowUserPointer(m_window, this);
 	glfwSetWindowSizeCallback(m_window, windowResize);
+	glfwSetKeyCallback(m_window, keyCallback);
+	glfwSetMouseButtonCallback(m_window, mouseButtonCallback);
+	glfwSetCursorPosCallback(m_window, cursorPositionCallback);
+
+	if ( glewInit() != GLEW_OK )
+	{
+		SE_LOG_ERROR("Could not initialize GLEW!");
+		return false;
+	}
 
 	return true;
 }
@@ -58,6 +91,22 @@ void Window::Close()
 bool Window::IsClosed() const
 {
 	return glfwWindowShouldClose(m_window) == 1;
+}
+//-----------------------------------------------------------------------------
+bool Window::IsKeyPressed(unsigned int keycode) const
+{
+	return m_keys[keycode];
+}
+//-----------------------------------------------------------------------------
+bool Window::IsMouseButtonPressed(unsigned int button) const
+{
+	return m_mouseButtons[button];
+}
+//-----------------------------------------------------------------------------
+void Window::GetMousePosition(double &x, double &y) const
+{
+	x = m_x;
+	y = m_y;
 }
 //-----------------------------------------------------------------------------
 

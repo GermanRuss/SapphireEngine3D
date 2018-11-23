@@ -6,6 +6,13 @@
 #if SE_COMPILER_MSVC
 #	pragma comment(lib, "OpenGL32.lib")
 #endif
+#if SE_COMPILER_MSVC
+#	if SE_ARCH_32BIT
+#		pragma comment(lib, "glew/lib/Win32/glew32s.lib")
+#	elif SE_ARCH_64BIT
+#		pragma comment(lib, "glew/lib/x64/glew32s.lib")
+#	endif
+#endif
 
 //=============================================================================
 SE_NAMESPACE_BEGIN

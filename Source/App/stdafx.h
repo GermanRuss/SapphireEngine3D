@@ -9,6 +9,9 @@
 
 #include <cstdint>
 
+#define GLEW_STATIC
+#include <glew/GL/glew.h>
+
 #include <GLFW/include/GLFW/glfw3.h>
 
 #include "Core/Logger.h"

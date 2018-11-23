@@ -23,7 +23,7 @@ public:
 	virtual void OnFrame() = 0;
 	virtual void OnClose() = 0;
 
-private:
+protected:
 	Window m_window;
 };
 
