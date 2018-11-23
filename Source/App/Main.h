@@ -2,8 +2,6 @@
 
 #include "Application.h"
 
-extern se::ApplicationSettings SetAppSetting();
-
 //=============================================================================
 SE_NAMESPACE_BEGIN
 
@@ -16,8 +14,7 @@ SE_FORCE_INLINE int Main(int argc, const char *argv[])
 #endif // SE_ENABLE_EXCETION
 	{		
 		T app;
-		const auto setting = SetAppSetting();
-		ret = app.Run(setting, argc, argv);
+		ret = app.Run(argc, argv);
 	}
 #if SE_ENABLE_EXCETION
 	catch ( ... )

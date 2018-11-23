@@ -35,6 +35,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{C5D8D5AB-2DA6-4EE8-8A9E-80733A40A748}"
 	ProjectSection(SolutionItems) = preProject
 		..\doc\other.txt = ..\doc\other.txt
+		..\doc\todo.txt = ..\doc\todo.txt
 	EndProjectSection
 EndProject
 Global

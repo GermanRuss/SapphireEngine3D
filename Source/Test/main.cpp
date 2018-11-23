@@ -22,13 +22,38 @@
 #endif
 
 //-----------------------------------------------------------------------------
-se::ApplicationSettings SetAppSetting()
+
+
+class MyApp : public se::Application
 {
-	se::ApplicationSettings setting;
-	setting.width = 800;
-	setting.height = 600;
-	return setting;
-}
+public:
+	se::ApplicationSetting InitSetting() final
+	{
+		se::ApplicationSetting setting;
+		setting.window.width = 800;
+		setting.window.height = 600;
+		setting.window.title = "Test Sapphire";
+		return setting;
+	}
+
+	bool OnInit() final
+	{
+		glClearColor(0.2f, 0.4f, 0.9f, 1.0f);
+		return true;
+	}
+	void OnFrame() final
+	{
+		glBegin(GL_QUADS);
+		glVertex2f(-0.5f, -0.5f);
+		glVertex2f(-0.5f, 0.5f);
+		glVertex2f(0.5f, 0.5f);
+		glVertex2f(0.5f, -0.5f);
+		glEnd();
+	}
+	void OnClose() final
+	{
+	}
+};
 //-----------------------------------------------------------------------------
-SE_DECLARE_MAIN(se::Application);
+SE_DECLARE_MAIN(MyApp);
 //-----------------------------------------------------------------------------

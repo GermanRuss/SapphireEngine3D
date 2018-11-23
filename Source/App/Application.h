@@ -5,27 +5,25 @@
 //=============================================================================
 SE_NAMESPACE_BEGIN
 
-struct ApplicationSettings
+struct ApplicationSetting
 {
-	ApplicationSettings() = default;
-	ApplicationSettings(uint32_t w, uint32_t h)
-		: width(w)
-		, height(h)
-	{
-	}
-
-	uint32_t width = 800;
-	uint32_t height = 600;
+	WindowConfig window;
 };
 
 class Application
 {
 public:
+	virtual ~Application() = default;
+
 	// Run method. Command line arguments passed in.
-	int Run(const ApplicationSettings &setting, int argc, const char *argv[]);
+	int Run(int argc, const char *argv[]);
+
+	virtual ApplicationSetting InitSetting() = 0;
+	virtual bool OnInit() = 0;
+	virtual void OnFrame() = 0;
+	virtual void OnClose() = 0;
 
 private:
-	ApplicationSettings m_setting;
 	Window m_window;
 };
 

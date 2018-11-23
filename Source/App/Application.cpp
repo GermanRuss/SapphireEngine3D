@@ -3,24 +3,44 @@
 #include "stdafx.h"
 #include "Application.h"
 
+#if SE_COMPILER_MSVC
+#	pragma comment(lib, "OpenGL32.lib")
+#endif
+
 //=============================================================================
 SE_NAMESPACE_BEGIN
 
 //-----------------------------------------------------------------------------
-int Application::Run(const ApplicationSettings &setting, int argc, const char *argv[])
+int Application::Run(int argc, const char *argv[])
 {
 	SE_UNUSED(argc);
 	SE_UNUSED(argv);
 
-	m_setting = setting;
+	//-------------------------------------------------------------------------
+	// INIT
+	{
+		const ApplicationSetting setting = InitSetting();
 
-	if ( !m_window.Init() )
-		return 1;
+		if ( !m_window.Init(setting.window) )
+			return 1;
 
-	while ( m_window.Frame() );
+		if ( !OnInit() )
+			return 1;
+	}	
 
+	//-------------------------------------------------------------------------
+	// RUN
+	while ( !m_window.IsClosed() )
+	{
+		m_window.BeginFrame();
+		OnFrame();		
+		m_window.EndFrame();
+	}
+
+	//-------------------------------------------------------------------------
+	// Close
+	OnClose();
 	m_window.Close();
-
 	return 0;
 }
 //-----------------------------------------------------------------------------
