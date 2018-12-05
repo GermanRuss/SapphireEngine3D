@@ -3,7 +3,7 @@
 #include "Core/Base.h"
 
 //=============================================================================
-#ifdef SE_COMPILER_MSVC
+#if SE_COMPILER_MSVC
 #	pragma warning(push, 3) // Set warning levels to a quieter level for the STL
 #endif
 
@@ -12,9 +12,14 @@
 //#define GLEW_STATIC
 //#include <glew/GL/glew.h>
 
+#if SE_COMPILER_MSVC && SE_PLATFORM_WINDOWS
+#	define SDL_MAIN_HANDLED
+#endif
+#include <SDL2/SDL.h>
+
 #include "Core/Logger.h"
 
-#ifdef SE_COMPILER_MSVC
+#if SE_COMPILER_MSVC
 #	pragma warning(pop)     // Restore warning levels for our code
 #endif
 //=============================================================================
