@@ -18,9 +18,6 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="glfw_src.c" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{66E2BC8F-0D3E-4B1F-8580-3E96E457343E}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>

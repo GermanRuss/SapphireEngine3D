@@ -5,7 +5,7 @@
 //=============================================================================
 #ifdef SE_COMPILER_MSVC
 #	pragma warning(push, 3) // Set warning levels to a quieter level for the STL
-//#	pragma warning(disable: 4548)
+//#	pragma warning(disable: 0000)
 #endif
 
 #include <cstdint>

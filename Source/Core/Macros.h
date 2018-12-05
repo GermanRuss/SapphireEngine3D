@@ -3,9 +3,9 @@
 //=============================================================================
 // основное пространство имен
 //=============================================================================
-#define SE_NAMESPACE         se
-#define SE_NAMESPACE_BEGIN   namespace SE_NAMESPACE {
-#define SE_NAMESPACE_END     }
+#define SE_NAMESPACE               se
+#define SE_NAMESPACE_BEGIN         namespace SE_NAMESPACE {
+#define SE_NAMESPACE_END           }
 
 //=============================================================================
 // внутреннее пространство имен, недоступное пользователю

@@ -32,9 +32,6 @@
     <ClInclude Include="Global.h">
       <Filter>Base</Filter>
     </ClInclude>
-    <ClInclude Include="Function.h">
-      <Filter>Template</Filter>
-    </ClInclude>
     <ClInclude Include="Logger.h">
       <Filter>Debug</Filter>
     </ClInclude>

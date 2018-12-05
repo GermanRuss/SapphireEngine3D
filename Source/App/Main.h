@@ -8,20 +8,8 @@ SE_NAMESPACE_BEGIN
 template <typename T>
 SE_FORCE_INLINE int Main(int argc, const char *argv[])
 {
-	int ret = 0;
-#if SE_ENABLE_EXCETION
-	try
-#endif // SE_ENABLE_EXCETION
-	{		
-		T app;
-		ret = app.Run(argc, argv);
-	}
-#if SE_ENABLE_EXCETION
-	catch ( ... )
-	{
-	}
-#endif // SE_ENABLE_EXCETION
-	return ret;
+	T app;
+	return app.Run(argc, argv);
 }
 
 SE_NAMESPACE_END

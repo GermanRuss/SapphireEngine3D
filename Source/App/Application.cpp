@@ -4,13 +4,13 @@
 #include "Application.h"
 
 #if SE_COMPILER_MSVC
-#	pragma comment(lib, "OpenGL32.lib")
+//#	pragma comment(lib, "OpenGL32.lib")
 #endif
 #if SE_COMPILER_MSVC
 #	if SE_ARCH_32BIT
-#		pragma comment(lib, "glew/lib/Win32/glew32s.lib")
+//#		pragma comment(lib, "glew/lib/Win32/glew32s.lib")
 #	elif SE_ARCH_64BIT
-#		pragma comment(lib, "glew/lib/x64/glew32s.lib")
+//#		pragma comment(lib, "glew/lib/x64/glew32s.lib")
 #	endif
 #endif
 
@@ -28,8 +28,7 @@ int Application::Run(int argc, const char *argv[])
 	{
 		const ApplicationSetting setting = InitSetting();
 
-		if ( !m_window.Init(setting.window) )
-			return 1;
+		// .... 
 
 		if ( !OnInit() )
 			return 1;
@@ -37,17 +36,12 @@ int Application::Run(int argc, const char *argv[])
 
 	//-------------------------------------------------------------------------
 	// RUN
-	while ( !m_window.IsClosed() )
-	{
-		m_window.BeginFrame();
-		OnFrame();		
-		m_window.EndFrame();
-	}
+	// ....
 
 	//-------------------------------------------------------------------------
 	// Close
 	OnClose();
-	m_window.Close();
+	// ....
 	return 0;
 }
 //-----------------------------------------------------------------------------

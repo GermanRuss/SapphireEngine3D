@@ -15,7 +15,6 @@ class Application
 public:
 	virtual ~Application() = default;
 
-	// Run method. Command line arguments passed in.
 	int Run(int argc, const char *argv[]);
 
 	virtual ApplicationSetting InitSetting() = 0;
