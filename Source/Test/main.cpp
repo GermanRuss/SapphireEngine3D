@@ -8,9 +8,6 @@
 #include "App/stdafx.h"
 #include "App/Main.h"
 
-#include <iostream>
-#include <cassert>
-
 //-----------------------------------------------------------------------------
 #if SE_COMPILER_MSVC
 #	if SE_ARCH_32BIT
@@ -44,7 +41,7 @@ public:
 	void OnFrame() final
 	{		
 	}
-	void OnClose() final
+	void OnShutdown() final
 	{
 	}
 };

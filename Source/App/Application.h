@@ -20,10 +20,18 @@ public:
 	virtual ApplicationSetting InitSetting() = 0;
 	virtual bool OnInit() = 0;
 	virtual void OnFrame() = 0;
-	virtual void OnClose() = 0;
+	virtual void OnShutdown() = 0;
+
+	void Exit();
 
 protected:
+	bool init();
+	void frame();
+	void shutdown();
+	
 	Window m_window;
+
+	bool m_finished = false;
 };
 
 SE_NAMESPACE_END

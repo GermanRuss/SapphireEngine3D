@@ -25,7 +25,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config Engine", "Config Eng
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "template file", "template file", "{AD7BEF18-F718-4D0A-9A19-C5AE6DDF8D2D}"
 	ProjectSection(SolutionItems) = preProject
-		..\doc\other.txt = ..\doc\other.txt
 		..\doc\TemplateFile\TemplateCPP.cpp = ..\doc\TemplateFile\TemplateCPP.cpp
 		..\doc\TemplateFile\TemplateHeader.h = ..\doc\TemplateFile\TemplateHeader.h
 	EndProjectSection
