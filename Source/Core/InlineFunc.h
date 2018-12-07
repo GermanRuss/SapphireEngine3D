@@ -17,5 +17,11 @@ inline void SafeDeleteArray(T *&resource)
 	resource = nullptr;
 }
 
+template <typename T, int count> 
+constexpr int LengthOf(const T(&)[count])
+{
+	return count;
+};
+
 SE_NAMESPACE_END
 //=============================================================================

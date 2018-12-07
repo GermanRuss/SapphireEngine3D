@@ -64,15 +64,6 @@
 #define SE_UNUSED(_arg) ((void)_arg)
 
 //=============================================================================
-// SE_COUNT_OF
-//=============================================================================
-// http://cnicholson.net/2011/01/stupid-c-tricks-a-better-sizeof_array/
-template<typename T, size_t N>
-char(&SIZEOF_ARRAY_REQUIRES_ARRAY_ARGUMENT_SE_COUNTOF(const T(&)[N]))[N];
-
-#define SE_COUNT_OF(_x) sizeof(SIZEOF_ARRAY_REQUIRES_ARRAY_ARGUMENT_SE_COUNTOF(_x) )
-
-//=============================================================================
 // SE_BREAKPOINT
 //=============================================================================
 #if SE_PLATFORM_LINUX

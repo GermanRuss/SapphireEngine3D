@@ -35,6 +35,9 @@
     <ClInclude Include="Logger.h">
       <Filter>Debug</Filter>
     </ClInclude>
+    <ClInclude Include="Types.h">
+      <Filter>Base</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">

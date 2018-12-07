@@ -6,6 +6,7 @@
 #include "MinStdConfig.h"
 #include "MinWindowsConfig.h"
 #include "Macros.h"
+#include "Types.h"
 #include "InlineFunc.h"
 #include "Global.h"
 
