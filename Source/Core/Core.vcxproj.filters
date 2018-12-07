@@ -5,6 +5,18 @@
     <ClCompile Include="Logger.cpp">
       <Filter>Debug</Filter>
     </ClCompile>
+    <ClCompile Include="DefaultAllocator.cpp">
+      <Filter>Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Atomic.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Sync.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -38,6 +50,24 @@
     <ClInclude Include="Types.h">
       <Filter>Base</Filter>
     </ClInclude>
+    <ClInclude Include="IAllocator.h">
+      <Filter>Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="DefaultAllocator.h">
+      <Filter>Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Atomic.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleWindows.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Sync.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
@@ -54,6 +84,9 @@
     </Filter>
     <Filter Include="Debug">
       <UniqueIdentifier>{3be04d7e-87a3-4be4-b629-c0c237277173}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thread">
+      <UniqueIdentifier>{8827884c-8ef0-483b-86c9-8df7776987cc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

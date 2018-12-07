@@ -15,6 +15,11 @@
 #define SE_NAMESPACE_PRIVATE_END   }
 
 //=============================================================================
+// SE_VOID_MACROS
+//=============================================================================
+#define SE_VOID_MACROS(_x) { false ? (void)(_x) : (void)0; }
+
+//=============================================================================
 // SE_STRINGIZE
 //=============================================================================
 #define SE_STRINGIZE( _n )   SE_STRINGIZE_2( _n )
@@ -26,7 +31,7 @@
 #if SE_COMPILER_MSVC
 #	define TODO(_msg) __pragma(message(__FILE__ "(" SE_STRINGIZE(__LINE__) ") : TODO: " _msg))
 #else
-#	define TODO( _msg ) ((void)0)
+#	define TODO(_msg) SE_VOID_MACROS(_msg)
 #endif
 
 //=============================================================================
@@ -61,7 +66,7 @@
 //=============================================================================
 // SE_UNUSED
 //=============================================================================
-#define SE_UNUSED(_arg) ((void)_arg)
+#define SE_UNUSED(_arg) SE_VOID_MACROS(_arg)
 
 //=============================================================================
 // SE_BREAKPOINT
@@ -104,6 +109,6 @@ extern void __cdecl __debugbreak(void);
                 }                                  \
             } while(false)
 #else
-#	define Assert(expr) ((void)0)
-#	define AssertMsg(expr, msg) ((void)0)
+#	define Assert(_expr) SE_VOID_MACROS(_expr)
+#	define AssertMsg(_expr, _msg) SE_VOID_MACROS(_expr) SE_VOID_MACROS(_msg)
 #endif

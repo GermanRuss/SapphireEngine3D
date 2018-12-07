@@ -1,7 +1,7 @@
 ﻿#pragma once
 
 //=============================================================================
-// Minimal Windows.h Header
+// Minimal Windows.h Config
 //=============================================================================
 #if SE_PLATFORM_WINDOWS
 #	define WIN32_LEAN_AND_MEAN      // 
