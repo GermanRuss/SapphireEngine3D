@@ -179,6 +179,7 @@
     <ClInclude Include="SimpleWindows.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="MinStdConfig.h" />
+    <ClInclude Include="Str.h" />
     <ClInclude Include="Sync.h" />
     <ClInclude Include="Thread.h" />
     <ClInclude Include="Types.h" />
@@ -193,6 +194,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Str.cpp" />
     <ClCompile Include="Sync.cpp" />
     <ClCompile Include="Thread.cpp" />
   </ItemGroup>
