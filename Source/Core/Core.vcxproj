@@ -165,9 +165,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Array.h" />
     <ClInclude Include="Atomic.h" />
     <ClInclude Include="Base.h" />
     <ClInclude Include="DefaultAllocator.h" />
+    <ClInclude Include="Delegate.h" />
+    <ClInclude Include="DelegateList.h" />
     <ClInclude Include="Global.h" />
     <ClInclude Include="IAllocator.h" />
     <ClInclude Include="InlineFunc.h" />
@@ -183,6 +186,7 @@
     <ClInclude Include="Sync.h" />
     <ClInclude Include="Thread.h" />
     <ClInclude Include="Types.h" />
+    <ClInclude Include="Vec.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Atomic.cpp" />
@@ -197,6 +201,7 @@
     <ClCompile Include="Str.cpp" />
     <ClCompile Include="Sync.cpp" />
     <ClCompile Include="Thread.cpp" />
+    <ClCompile Include="Vec.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

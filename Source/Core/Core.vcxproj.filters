@@ -20,6 +20,9 @@
     <ClCompile Include="Str.cpp">
       <Filter>Containers</Filter>
     </ClCompile>
+    <ClCompile Include="Vec.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -74,6 +77,18 @@
     <ClInclude Include="Str.h">
       <Filter>Containers</Filter>
     </ClInclude>
+    <ClInclude Include="Vec.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Array.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="DelegateList.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="Delegate.h">
+      <Filter>Containers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
@@ -93,6 +108,9 @@
     </Filter>
     <Filter Include="Thread">
       <UniqueIdentifier>{8827884c-8ef0-483b-86c9-8df7776987cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{12cf1d47-366c-417b-b3f5-49103d1a0244}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

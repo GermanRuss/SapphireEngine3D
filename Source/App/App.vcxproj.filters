@@ -28,5 +28,8 @@
     <Filter Include="Window">
       <UniqueIdentifier>{2f678273-b629-4b6f-8bf1-b8d0d9c5cf9e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{89d4c477-cadf-4d82-8d9f-381eb513e291}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
