@@ -172,7 +172,6 @@
     <ClInclude Include="MinWindowsConfig.h" />
     <ClInclude Include="NonCopyable.h" />
     <ClInclude Include="Platform.h" />
-    <ClInclude Include="SimpleWindows.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="MinStdConfig.h" />
   </ItemGroup>

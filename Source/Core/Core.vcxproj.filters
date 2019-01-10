@@ -29,9 +29,6 @@
     <ClInclude Include="Global.h">
       <Filter>Base</Filter>
     </ClInclude>
-    <ClInclude Include="SimpleWindows.h">
-      <Filter>Base</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
