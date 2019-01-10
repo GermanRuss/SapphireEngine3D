@@ -6,7 +6,7 @@
 
 // App lib
 #include "App/stdafx.h"
-#include "App/Main.h"
+#include "App/EntryPoint.h"
 
 //-----------------------------------------------------------------------------
 #if SE_COMPILER_MSVC

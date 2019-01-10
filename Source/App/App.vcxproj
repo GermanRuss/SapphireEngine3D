@@ -167,7 +167,7 @@
   <ItemGroup>
     <ClInclude Include="Application.h" />
     <ClInclude Include="Window.h" />
-    <ClInclude Include="Main.h" />
+    <ClInclude Include="EntryPoint.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
