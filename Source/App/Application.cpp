@@ -55,6 +55,11 @@ bool Application::init()
 	const ApplicationSetting setting = InitSetting();
 	TODO("setting хранить в объектах, и get брать из них же");
 
+	Log::Init();
+	SE_CORE_WARN("Initialized Log!");
+	int a = 5;
+	SE_INFO("Hello! Var={0}", a);
+
 	return true;
 }
 //-----------------------------------------------------------------------------

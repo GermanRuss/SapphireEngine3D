@@ -1,13 +1,12 @@
 ﻿#pragma once
 
-#include "Core/Base.h"
+#include "Core/stdafx.h"
+#include "Core/Log.h"
 
 //=============================================================================
 #if SE_COMPILER_MSVC
 #	pragma warning(push, 3) // Set warning levels to a quieter level for the STL
 #endif
-
-#include <cstdint>
 
 #if SE_COMPILER_MSVC
 #	pragma warning(pop)     // Restore warning levels for our code
