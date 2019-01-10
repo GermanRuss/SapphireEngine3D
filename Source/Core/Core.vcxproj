@@ -165,16 +165,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Array.h" />
-    <ClInclude Include="Atomic.h" />
     <ClInclude Include="Base.h" />
-    <ClInclude Include="DefaultAllocator.h" />
-    <ClInclude Include="Delegate.h" />
-    <ClInclude Include="DelegateList.h" />
     <ClInclude Include="Global.h" />
-    <ClInclude Include="IAllocator.h" />
     <ClInclude Include="InlineFunc.h" />
-    <ClInclude Include="Logger.h" />
     <ClInclude Include="Macros.h" />
     <ClInclude Include="MinWindowsConfig.h" />
     <ClInclude Include="NonCopyable.h" />
@@ -182,26 +175,14 @@
     <ClInclude Include="SimpleWindows.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="MinStdConfig.h" />
-    <ClInclude Include="Str.h" />
-    <ClInclude Include="Sync.h" />
-    <ClInclude Include="Thread.h" />
-    <ClInclude Include="Types.h" />
-    <ClInclude Include="Vec.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Atomic.cpp" />
-    <ClCompile Include="DefaultAllocator.cpp" />
-    <ClCompile Include="Logger.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Str.cpp" />
-    <ClCompile Include="Sync.cpp" />
-    <ClCompile Include="Thread.cpp" />
-    <ClCompile Include="Vec.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

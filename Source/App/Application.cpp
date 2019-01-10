@@ -9,10 +9,10 @@
 #if SE_COMPILER_MSVC
 #	if SE_ARCH_32BIT
 //#		pragma comment(lib, "glew/lib/Win32/glew32s.lib")
-#		pragma comment(lib, "SDL2/lib/x86/SDL2.lib")
+//#		pragma comment(lib, "SDL2/lib/x86/SDL2.lib")
 #	elif SE_ARCH_64BIT
 //#		pragma comment(lib, "glew/lib/x64/glew32s.lib")
-#		pragma comment(lib, "SDL2/lib/x64/SDL2.lib")
+//#		pragma comment(lib, "SDL2/lib/x64/SDL2.lib")
 #	endif
 #endif
 
