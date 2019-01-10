@@ -13,11 +13,11 @@
 #	if SE_ARCH_32BIT
 #		pragma comment(lib, "Core_Win32.lib")
 #		pragma comment(lib, "App_Win32.lib")
-//#		pragma comment(lib, "3rdparty_Win32.lib")
+#		pragma comment(lib, "3rdparty_Win32.lib")
 #	elif SE_ARCH_64BIT
 #		pragma comment(lib, "Core_x64.lib")
 #		pragma comment(lib, "App_x64.lib")
-//#		pragma comment(lib, "3rdparty_x64.lib")
+#		pragma comment(lib, "3rdparty_x64.lib")
 #	endif
 #endif
 

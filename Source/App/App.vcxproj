@@ -166,12 +166,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
+    <ClInclude Include="ApplicationEvent.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="KeyEvent.h" />
+    <ClInclude Include="MouseEvent.h" />
+    <ClInclude Include="Win32Window.h" />
     <ClInclude Include="Window.h" />
     <ClInclude Include="EntryPoint.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Win32Window.cpp" />
     <ClCompile Include="Window.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

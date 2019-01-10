@@ -8,6 +8,9 @@
     <ClCompile Include="Window.cpp">
       <Filter>Window</Filter>
     </ClCompile>
+    <ClCompile Include="Win32Window.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -20,6 +23,21 @@
     <ClInclude Include="EntryPoint.h">
       <Filter>App</Filter>
     </ClInclude>
+    <ClInclude Include="Event.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Win32Window.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseEvent.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyEvent.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplicationEvent.h">
+      <Filter>Event</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="App">
@@ -30,6 +48,9 @@
     </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{89d4c477-cadf-4d82-8d9f-381eb513e291}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Event">
+      <UniqueIdentifier>{22127670-3b04-451f-9b2f-c0072f4057b3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -4,17 +4,10 @@
 #include "Application.h"
 
 #if SE_COMPILER_MSVC
-//#	pragma comment(lib, "OpenGL32.lib")
+#	pragma comment(lib, "OpenGL32.lib")
 #endif
-#if SE_COMPILER_MSVC
-#	if SE_ARCH_32BIT
-//#		pragma comment(lib, "glew/lib/Win32/glew32s.lib")
-//#		pragma comment(lib, "SDL2/lib/x86/SDL2.lib")
-#	elif SE_ARCH_64BIT
-//#		pragma comment(lib, "glew/lib/x64/glew32s.lib")
-//#		pragma comment(lib, "SDL2/lib/x64/SDL2.lib")
-#	endif
-#endif
+
+#define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
 
 //=============================================================================
 SE_NAMESPACE_BEGIN
@@ -57,20 +50,38 @@ bool Application::init()
 
 	Log::Init();
 	SE_CORE_WARN("Initialized Log!");
-	int a = 5;
-	SE_INFO("Hello! Var={0}", a);
 
+	m_Window = std::unique_ptr<Window>(Window::Create(setting.window));
+	m_Window->SetEventCallback(BIND_EVENT_FN(onEvent));
+	
 	return true;
 }
 //-----------------------------------------------------------------------------
 void Application::frame()
 {
+	glClearColor(0.3, 0.3, 0.9, 1.0);
+	glClear(GL_COLOR_BUFFER_BIT);
 
+	m_Window->OnUpdate();
 }
 //-----------------------------------------------------------------------------
 void Application::shutdown()
 {
 
+}
+//-----------------------------------------------------------------------------
+void Application::onEvent(Event& e)
+{
+	EventDispatcher dispatcher(e);
+	dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(onWindowClose));
+
+	//...
+}
+//-----------------------------------------------------------------------------
+bool Application::onWindowClose(WindowCloseEvent &)
+{
+	m_finished = true;
+	return true;
 }
 //-----------------------------------------------------------------------------
 

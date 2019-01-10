@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="GLFW">
+      <UniqueIdentifier>{b180e131-13f8-41f2-890a-6094ad753c37}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GLFW\src\win32_window.c">
+      <Filter>GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="GLFW\src\context.c">
+      <Filter>GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="GLFW\src\egl_context.c">
+      <Filter>GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="GLFW\src\init.c">
+      <Filter>GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="GLFW\src\input.c">
+      <Filter>GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="GLFW\src\monitor.c">
+      <Filter>GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="GLFW\src\osmesa_context.c">
+      <Filter>GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="GLFW\src\vulkan.c">
+      <Filter>GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="GLFW\src\wgl_context.c">
+      <Filter>GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="GLFW\src\win32_init.c">
+      <Filter>GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="GLFW\src\win32_joystick.c">
+      <Filter>GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="GLFW\src\win32_monitor.c">
+      <Filter>GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="GLFW\src\win32_thread.c">
+      <Filter>GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="GLFW\src\win32_time.c">
+      <Filter>GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="glad.c" />
+    <ClCompile Include="GLFW\src\window.c">
+      <Filter>GLFW</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

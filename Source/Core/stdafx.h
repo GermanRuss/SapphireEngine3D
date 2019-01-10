@@ -12,6 +12,11 @@
 
 #include <cstdint>
 #include <memory>
+#include <functional>
+#include <ostream>
+#include <sstream>
+#include <string>
+
 
 #if defined(_DEBUG) && SE_COMPILER_MSVC
 #	include <crtdbg.h>
@@ -22,6 +27,9 @@
 #include <spdlog/spdlog.h>
 #include <spdlog/fmt/ostr.h>
 #include <spdlog/sinks/stdout_color_sinks.h>
+
+#include <glad/glad.h>
+#include <GLFW/include/GLFW/glfw3.h>
 
 #if SE_COMPILER_MSVC
 #	pragma warning(pop)     // Restore warning levels for our code

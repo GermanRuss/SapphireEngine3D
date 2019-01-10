@@ -112,3 +112,8 @@ extern void __cdecl __debugbreak(void);
 #	define Assert(_expr) SE_VOID_MACROS(_expr)
 #	define AssertMsg(_expr, _msg) SE_VOID_MACROS(_expr) SE_VOID_MACROS(_msg)
 #endif
+
+//=============================================================================
+// SE_BIT
+//=============================================================================
+#define SE_BIT(x) (1 << x)
