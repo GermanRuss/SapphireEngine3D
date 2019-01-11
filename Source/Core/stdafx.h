@@ -11,15 +11,15 @@
 #endif
 
 #include <cstdint>
-
+#include <stdexcept>
 #include <memory>
-
+#include <iomanip>
 #include <functional>
-
+#include <iostream>
 #include <ostream>
 #include <sstream>
-
 #include <string>
+
 
 #if SE_DEBUG && SE_COMPILER_MSVC
 #	include <crtdbg.h>
@@ -40,4 +40,4 @@
 //=============================================================================
 
 #include "BasicTypes.h"
-#include "DataBlob.h"
+#include "Error.h"

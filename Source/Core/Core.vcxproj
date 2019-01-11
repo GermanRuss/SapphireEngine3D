@@ -169,11 +169,15 @@
     <ClInclude Include="BasicTypes.h" />
     <ClInclude Include="DataBlob.h" />
     <ClInclude Include="DebugOutput.h" />
+    <ClInclude Include="Error.h" />
+    <ClInclude Include="FileStream.h" />
+    <ClInclude Include="FormatString.h" />
     <ClInclude Include="Global.h" />
     <ClInclude Include="InlineFunc.h" />
     <ClInclude Include="InterfaceID.h" />
     <ClInclude Include="Log.h" />
     <ClInclude Include="Macros.h" />
+    <ClInclude Include="MemoryAllocator.h" />
     <ClInclude Include="MinWindowsConfig.h" />
     <ClInclude Include="NonCopyable.h" />
     <ClInclude Include="Object.h" />

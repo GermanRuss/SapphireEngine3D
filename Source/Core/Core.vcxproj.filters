@@ -56,6 +56,18 @@
     <ClInclude Include="DebugOutput.h">
       <Filter>Debug</Filter>
     </ClInclude>
+    <ClInclude Include="MemoryAllocator.h">
+      <Filter>Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="FormatString.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Error.h">
+      <Filter>Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="FileStream.h">
+      <Filter>IO</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
@@ -81,6 +93,12 @@
     </Filter>
     <Filter Include="Object">
       <UniqueIdentifier>{7e365089-85ee-45f6-aea7-ac480ac72466}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{2e05e79c-646d-4c79-b7f0-1f89c9c75f0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IO">
+      <UniqueIdentifier>{e3b399b7-f450-446c-a6fa-ab819c3ef511}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
