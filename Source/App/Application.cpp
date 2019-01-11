@@ -59,7 +59,7 @@ bool Application::init()
 //-----------------------------------------------------------------------------
 void Application::frame()
 {
-	glClearColor(0.3, 0.3, 0.9, 1.0);
+	glClearColor(0.3f, 0.3f, 0.9f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
 
 	m_Window->OnUpdate();

@@ -11,16 +11,19 @@
 #endif
 
 #include <cstdint>
+
 #include <memory>
+
 #include <functional>
+
 #include <ostream>
 #include <sstream>
+
 #include <string>
 
-
-#if defined(_DEBUG) && SE_COMPILER_MSVC
+#if SE_DEBUG && SE_COMPILER_MSVC
 #	include <crtdbg.h>
-#elif defined(_DEBUG)
+#elif SE_DEBUG
 #	include <cassert>
 #endif
 
@@ -35,3 +38,6 @@
 #	pragma warning(pop)     // Restore warning levels for our code
 #endif
 //=============================================================================
+
+#include "BasicTypes.h"
+#include "DataBlob.h"

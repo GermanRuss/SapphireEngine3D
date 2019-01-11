@@ -11,7 +11,7 @@ struct ApplicationSetting
 	WindowConfig window;
 };
 
-class Application
+class Application : NonCopyable
 {
 public:
 	virtual ~Application() = default;

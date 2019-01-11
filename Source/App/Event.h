@@ -16,9 +16,9 @@ enum EventCategory
 {
 	None = 0,
 	EventCategoryApplication = SE_BIT(0),
-	EventCategoryInput = SE_BIT(1),
-	EventCategoryKeyboard = SE_BIT(2),
-	EventCategoryMouse = SE_BIT(3),
+	EventCategoryInput       = SE_BIT(1),
+	EventCategoryKeyboard    = SE_BIT(2),
+	EventCategoryMouse       = SE_BIT(3),
 	EventCategoryMouseButton = SE_BIT(4)
 };
 

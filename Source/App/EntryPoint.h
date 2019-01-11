@@ -8,6 +8,10 @@ SE_NAMESPACE_BEGIN
 template <typename T>
 SE_FORCE_INLINE int Main(int argc, const char *argv[])
 {
+#if SE_DEBUG && SE_PLATFORM_WINDOWS
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+#endif
+
 	T app;
 	return app.Run(argc, argv);
 }

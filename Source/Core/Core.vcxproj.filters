@@ -5,6 +5,9 @@
     <ClCompile Include="Log.cpp">
       <Filter>Debug</Filter>
     </ClCompile>
+    <ClCompile Include="DebugOutput.cpp">
+      <Filter>Debug</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -35,6 +38,24 @@
     <ClInclude Include="Log.h">
       <Filter>Debug</Filter>
     </ClInclude>
+    <ClInclude Include="BasicTypes.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="InterfaceID.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ReferenceCounters.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="DataBlob.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugOutput.h">
+      <Filter>Debug</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
@@ -57,6 +78,9 @@
     </Filter>
     <Filter Include="Math">
       <UniqueIdentifier>{12cf1d47-366c-417b-b3f5-49103d1a0244}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{7e365089-85ee-45f6-aea7-ac480ac72466}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

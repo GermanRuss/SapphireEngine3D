@@ -33,7 +33,7 @@
 #define SE_PLATFORM_UWP            0 // Universal Windows platform
 
 // Debug
-#define SE_DEBUG_MODE				0
+#define SE_DEBUG                   0
 
 // OpenGL version
 #define SE_GL_DESKTOP              0
@@ -152,8 +152,8 @@
 // Win32 compilers use _DEBUG for specifying debug builds.
 // for MinGW, we set DEBUG
 #if defined(_DEBUG) || defined(DEBUG)
-#	undef  SE_DEBUG_MODE
-#	define SE_DEBUG_MODE 1
+#	undef  SE_DEBUG
+#	define SE_DEBUG 1
 #endif
 
 //=============================================================================
