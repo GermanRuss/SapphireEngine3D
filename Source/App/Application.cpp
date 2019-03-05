@@ -3,12 +3,6 @@
 #include "stdafx.h"
 #include "Application.h"
 
-#if SE_COMPILER_MSVC
-#	pragma comment(lib, "OpenGL32.lib")
-#endif
-
-#define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
-
 //=============================================================================
 SE_NAMESPACE_BEGIN
 
@@ -46,42 +40,17 @@ void Application::Exit()
 bool Application::init()
 {
 	const ApplicationSetting setting = InitSetting();
-	TODO("setting хранить в объектах, и get брать из них же");
 
-	Log::Init();
-	SE_CORE_WARN("Initialized Log!");
-
-	m_Window = std::unique_ptr<Window>(Window::Create(setting.window));
-	m_Window->SetEventCallback(BIND_EVENT_FN(onEvent));
-	
 	return true;
 }
 //-----------------------------------------------------------------------------
 void Application::frame()
 {
-	glClearColor(0.3f, 0.3f, 0.9f, 1.0f);
-	glClear(GL_COLOR_BUFFER_BIT);
-
-	m_Window->OnUpdate();
 }
 //-----------------------------------------------------------------------------
 void Application::shutdown()
 {
 
-}
-//-----------------------------------------------------------------------------
-void Application::onEvent(Event& e)
-{
-	EventDispatcher dispatcher(e);
-	dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(onWindowClose));
-
-	//...
-}
-//-----------------------------------------------------------------------------
-bool Application::onWindowClose(WindowCloseEvent &)
-{
-	m_finished = true;
-	return true;
 }
 //-----------------------------------------------------------------------------
 

@@ -1,17 +1,13 @@
 ﻿#pragma once
 
-#include "Window.h"
-#include "ApplicationEvent.h"
-
 //=============================================================================
 SE_NAMESPACE_BEGIN
 
 struct ApplicationSetting
 {
-	WindowConfig window;
 };
 
-class Application : NonCopyable
+class Application
 {
 public:
 	virtual ~Application() = default;
@@ -29,11 +25,6 @@ protected:
 	bool init();
 	void frame();
 	void shutdown();
-
-	void onEvent(Event &e);
-	bool onWindowClose(WindowCloseEvent &e);
-	
-	std::unique_ptr<Window> m_Window;
 
 	bool m_finished = false;
 };

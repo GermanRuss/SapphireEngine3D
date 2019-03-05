@@ -1,15 +1,16 @@
 ﻿#pragma once
 
+// Config Engine
 #include "CompilationOptions.h"
+#include "Version.h"
 
+// Base
 #include "Platform.h"
 #include "MinStdConfig.h"
 #include "MinWindowsConfig.h"
 #include "Macros.h"
 #include "InlineFunc.h"
 #include "Global.h"
-
-#include "Version.h"
 
 // DOC: https://azrael.digipen.edu/~mmead/www/docs/CompilingWarningLevel4.html
 #if SE_COMPILER_MSVC

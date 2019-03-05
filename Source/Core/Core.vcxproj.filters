@@ -2,12 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="Log.cpp">
-      <Filter>Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="DebugOutput.cpp">
-      <Filter>Debug</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -29,44 +23,8 @@
     <ClInclude Include="InlineFunc.h">
       <Filter>Base</Filter>
     </ClInclude>
-    <ClInclude Include="NonCopyable.h">
-      <Filter>Template</Filter>
-    </ClInclude>
     <ClInclude Include="Global.h">
       <Filter>Base</Filter>
-    </ClInclude>
-    <ClInclude Include="Log.h">
-      <Filter>Debug</Filter>
-    </ClInclude>
-    <ClInclude Include="BasicTypes.h">
-      <Filter>Base</Filter>
-    </ClInclude>
-    <ClInclude Include="InterfaceID.h">
-      <Filter>Object</Filter>
-    </ClInclude>
-    <ClInclude Include="ReferenceCounters.h">
-      <Filter>Object</Filter>
-    </ClInclude>
-    <ClInclude Include="Object.h">
-      <Filter>Object</Filter>
-    </ClInclude>
-    <ClInclude Include="DataBlob.h">
-      <Filter>Object</Filter>
-    </ClInclude>
-    <ClInclude Include="DebugOutput.h">
-      <Filter>Debug</Filter>
-    </ClInclude>
-    <ClInclude Include="MemoryAllocator.h">
-      <Filter>Memory</Filter>
-    </ClInclude>
-    <ClInclude Include="FormatString.h">
-      <Filter>Utility</Filter>
-    </ClInclude>
-    <ClInclude Include="Error.h">
-      <Filter>Debug</Filter>
-    </ClInclude>
-    <ClInclude Include="FileStream.h">
-      <Filter>IO</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -91,14 +49,14 @@
     <Filter Include="Math">
       <UniqueIdentifier>{12cf1d47-366c-417b-b3f5-49103d1a0244}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Object">
-      <UniqueIdentifier>{7e365089-85ee-45f6-aea7-ac480ac72466}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Utility">
       <UniqueIdentifier>{2e05e79c-646d-4c79-b7f0-1f89c9c75f0c}</UniqueIdentifier>
     </Filter>
     <Filter Include="IO">
       <UniqueIdentifier>{e3b399b7-f450-446c-a6fa-ab819c3ef511}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{7e365089-85ee-45f6-aea7-ac480ac72466}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

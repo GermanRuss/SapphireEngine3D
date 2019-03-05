@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "Test\Test.vcxproj", "{106EA5AB-3401-4D71-94B4-4DB352E8031A}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -19,7 +19,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config Engine", "Config Engine", "{74DA984F-50E7-47EC-9004-928295FF8BA4}"
 	ProjectSection(SolutionItems) = preProject
 		CompilationOptions.h = CompilationOptions.h
-		SapphireEngine.h = SapphireEngine.h
 		Version.h = Version.h
 	EndProjectSection
 EndProject
@@ -87,5 +86,8 @@ Global
 		{74DA984F-50E7-47EC-9004-928295FF8BA4} = {0246F283-F5C7-4B65-B0AF-E7530C3CA33E}
 		{AD7BEF18-F718-4D0A-9A19-C5AE6DDF8D2D} = {C5D8D5AB-2DA6-4EE8-8A9E-80733A40A748}
 		{66E2BC8F-0D3E-4B1F-8580-3E96E457343E} = {0246F283-F5C7-4B65-B0AF-E7530C3CA33E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {372E2D1C-3A54-4B27-B59E-984A5CE30B60}
 	EndGlobalSection
 EndGlobal

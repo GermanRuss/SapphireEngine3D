@@ -1,8 +1,6 @@
 ﻿#pragma once
 
 #include "Core/stdafx.h"
-#include "Core/NonCopyable.h"
-#include "Core/Log.h"
 
 //=============================================================================
 #if SE_COMPILER_MSVC

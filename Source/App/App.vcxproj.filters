@@ -5,38 +5,14 @@
     <ClCompile Include="Application.cpp">
       <Filter>App</Filter>
     </ClCompile>
-    <ClCompile Include="Window.cpp">
-      <Filter>Window</Filter>
-    </ClCompile>
-    <ClCompile Include="Win32Window.cpp">
-      <Filter>Window</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Application.h">
       <Filter>App</Filter>
     </ClInclude>
-    <ClInclude Include="Window.h">
-      <Filter>Window</Filter>
-    </ClInclude>
     <ClInclude Include="EntryPoint.h">
       <Filter>App</Filter>
-    </ClInclude>
-    <ClInclude Include="Event.h">
-      <Filter>Event</Filter>
-    </ClInclude>
-    <ClInclude Include="Win32Window.h">
-      <Filter>Window</Filter>
-    </ClInclude>
-    <ClInclude Include="MouseEvent.h">
-      <Filter>Event</Filter>
-    </ClInclude>
-    <ClInclude Include="KeyEvent.h">
-      <Filter>Event</Filter>
-    </ClInclude>
-    <ClInclude Include="ApplicationEvent.h">
-      <Filter>Event</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
